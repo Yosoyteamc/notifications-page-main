@@ -56,9 +56,10 @@ body{
     margin: 0 10px;
     background-color: var(--Blue);
     color: var(--White);
-    padding: 0 10px ;
+    padding: 5px 10px ;
     border-radius: 5px;
     cursor: default;
+    font-size: 0.7em;
 }
 
 .notifications__amount h3{
