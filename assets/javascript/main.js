@@ -56,7 +56,7 @@ event listener. The function will get the id of the element that was clicked and
 id is in the array notificationActive. If it is, it will execute the function desmarkItem. */
 window.addEventListener("click", e => {
     const id = e.target.getAttribute("id");
-    const name = e.target.getAttribute("data-*");
+    const name = e.target.getAttribute("data-id");
     const found = notificationActive.find(elem => id===elem || name===elem);
     if(found !== undefined){
         desmarkItem(found);
