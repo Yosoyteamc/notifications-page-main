@@ -3,7 +3,7 @@ creating a variable called count and assigning it the length of the array notifi
 In the app these variables would be populated with information from a json file
 */
 
-let notificationActive = ["001","002","003"];
+let notificationActive = ["1","2","3"];
 let count = notificationActive.length;
 
 /**
@@ -53,15 +53,11 @@ function desmark. The function desmark will add an event listener to all element
 click. When one of those elements is clicked, it will execute the function that is passed to the
 event listener. The function will get the id of the element that was clicked and will check if the
 id is in the array notificationActive. If it is, it will execute the function desmarkItem. */
-window.addEventListener("click", function desmark(){
-    document.querySelectorAll(".click").forEach(el => {
-        el.addEventListener("click", e => {
-            const id = e.target.getAttribute("id");
-            const found = notificationActive.find(elem => id===elem);
-            if(found !== undefined){
-                desmarkItem(found);
-            }
-        });
-    })
+window.addEventListener("click", e => {
+    const id = e.target.getAttribute("id");
+    const name = e.target.getAttribute("name");
+    const found = notificationActive.find(elem => id===elem || name===elem);
+    if(found !== undefined){
+        desmarkItem(found);
+    }
 });
-

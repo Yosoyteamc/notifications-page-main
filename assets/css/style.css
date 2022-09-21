@@ -62,12 +62,12 @@ body{
     font-size: 0.7em;
 }
 
-.notifications__amount h3{
+.notifications__amount p{
     color: var(--Very-dark-blue);
     font-size: 0.9em;
 }
 
-.notifications__amount h3:hover{
+.notifications__amount p:hover{
     cursor: pointer;
     color: var(--Blue);
 }
