@@ -48,6 +48,7 @@ function desmarkItem(id){
     notificationActive = notificationActive.filter((item) => item !== id);   
 }
 
+
 /* Adding an event listener to the window object. When the window is clicked, it will execute the
 function desmark. The function desmark will add an event listener to all elements with the class
 click. When one of those elements is clicked, it will execute the function that is passed to the
@@ -55,7 +56,7 @@ event listener. The function will get the id of the element that was clicked and
 id is in the array notificationActive. If it is, it will execute the function desmarkItem. */
 window.addEventListener("click", e => {
     const id = e.target.getAttribute("id");
-    const name = e.target.getAttribute("name");
+    const name = e.target.getAttribute("data-*");
     const found = notificationActive.find(elem => id===elem || name===elem);
     if(found !== undefined){
         desmarkItem(found);
